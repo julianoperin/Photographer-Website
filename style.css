@@ -75,7 +75,7 @@ body {
   font-family: "Quicksand", sans-serif;
   animation: opening 1s ease-in-out forwards;
 }
-
+/* FIRST PAGE */
 .main-header {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -153,4 +153,25 @@ nav {
   height: 100%;
   object-fit: cover;
   z-index: -2;
+}
+/* FIRST PAGE */
+
+/* MEDIA QUERIES FOR HAMBURGER */
+
+@media screen and (max-width: 857px) {
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: var(--black-color);
+    margin: 0.5rem 0rem;
+    display: block;
+  }
+
+  .nav-links {
+    background: var(--special-color);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 }
