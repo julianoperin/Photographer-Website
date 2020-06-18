@@ -1,0 +1,156 @@
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* google fonts */
+/*
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Dancing Script', cursive;
+
+*/
+
+html {
+  /* FONT SIZE */
+  font-size: 62.5%;
+  --header1: calc(2.5rem + 1vw);
+  --header2: calc(2.2rem + 1vw);
+  --header3: calc(1.8rem + 1vw);
+  --header4: calc(1.5rem + 1vw);
+  --text: calc(1.1rem + 1vw);
+  --big: calc(6rem + 1vw);
+  /* COLOR */
+  --special-color: #c1a2a2;
+  --background-color: #414141;
+  --gray-color: #f4f4f4;
+  --black-color: #3c3c3c;
+  --main-transition: all 0.3s linear;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--header1);
+}
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: var(--text);
+}
+h2 {
+  font-size: var(--header2);
+}
+h3 {
+  font-size: var(--header3);
+}
+h4,
+h5 {
+  font-size: var(--header4);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HELPER CLASSES */
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  animation: opening 1s ease-in-out forwards;
+}
+
+.main-header {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+}
+
+/* nav  */
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  min-height: 8vh;
+}
+
+#logo {
+  font-family: "Dancing Script", cursive;
+  flex: 1 1 20rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 20rem;
+  padding: 2rem 0rem;
+  transition: ;
+}
+.nav-links a:hover {
+  color: var(--special-color);
+  transition: var(--main-transition);
+  transform: scale(1.5);
+}
+
+.hero {
+  min-height: 92vh;
+  width: 95%;
+  margin: 0 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-introduction {
+  text-align: center;
+  flex: 1 1 40rem;
+}
+
+.hero-introduction h2 {
+  padding-top: 3rem;
+  letter-spacing: 0.6rem;
+  font-size: 4rem;
+}
+
+.hero-introduction p {
+  padding: 5rem 10rem;
+  line-height: 3.5rem;
+}
+
+.hero-introduction a {
+  padding: 2rem 8rem;
+  border: 2px solid var(--black-color);
+  transition: all 0.3s linear;
+}
+
+.hero-introduction a:hover {
+  background-color: var(--black-color);
+  color: white;
+}
+
+.hero-images {
+  flex: 1 1 40rem;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
