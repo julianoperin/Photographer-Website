@@ -22,12 +22,13 @@ html {
   --header2: calc(2.2rem + 1vw);
   --header3: calc(1.8rem + 1vw);
   --header4: calc(1.5rem + 1vw);
-  --text: calc(1.1rem + 1vw);
+  --text: calc(1rem + 1vw);
   --big: calc(6rem + 1vw);
   /* COLOR */
   --special-color: #c1a2a2;
   --background-color: #414141;
   --gray-color: #f4f4f4;
+  --second-gray-color: #f8f8f8;
   --black-color: #3c3c3c;
   --main-transition: all 0.3s linear;
   scroll-behavior: smooth;
@@ -75,7 +76,15 @@ body {
   font-family: "Quicksand", sans-serif;
   animation: opening 1s ease-in-out forwards;
 }
-/* FIRST PAGE */
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* HOME SECTION */
 .main-header {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -140,7 +149,8 @@ nav {
 }
 
 .hero-introduction a:hover {
-  background-color: var(--black-color);
+  background-color: var(--special-color);
+  border: 2px solid var(--special-color);
   color: white;
 }
 
@@ -155,15 +165,24 @@ nav {
   z-index: -2;
 }
 
-/* FIRST PAGE */
+/* END HOME SECTION */
 
-.burger,
-.menu-check {
-  display: none;
-}
-/* MEDIA QUERIES FOR HAMBURGER */
+/* MEDIA QUERIES FOR HAMBURGER and HOME PAGE */
 
 @media screen and (max-width: 857px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction h2 {
+    font-size: 2.7rem;
+  }
+  .hero-introduction p {
+    margin: 0rem 3rem;
+  }
+  .hero-introduction a {
+    margin-bottom: 4rem;
+  }
+  /* burger menu */
   .burger {
     position: relative;
     display: block;
@@ -183,12 +202,8 @@ nav {
     letter-spacing: 1.1rem;
   }
 
-  /* .nav-links a:hover {
-    color: black;
-  } */
-
   .nav-links {
-    background: var(--black-color);
+    background: var(--special-color);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -230,4 +245,53 @@ nav {
   .menu-check:checked ~ .burger span:nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
   }
+}
+/* END MEDIA QUERIES FOR HOME SECTION */
+
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.about-image {
+  flex: 1 1 40rem;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  padding-bottom: 3rem;
+}
+
+.about-text {
+  flex: 1 1 40rem;
+  padding: 3rem 5rem;
+  line-height: 3.5rem;
+  font-weight: lighter;
+}
+
+.text-container {
+  background: var(--second-gray-color);
+  padding: 5rem;
+}
+/* END ABOUT SECTION */
+
+/* ABOUT SECTION MEDIA QUERIES*/
+
+@media screen and (max-width: 857px) {
+  .about-image {
+    margin: 5rem;
+  }
+  .about-text {
+    margin: 5rem;
+  }
+}
+
+/* END ABOUT SECTION MEDIA QUERIES*/
+
+.burger,
+.menu-check {
+  display: none;
 }
