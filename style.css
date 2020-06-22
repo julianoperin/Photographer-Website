@@ -280,10 +280,14 @@ nav {
   .container-gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "i1 i2 i2" "i1 i3 i4" "i5 i3 i6" "i7 i7 i6";
+    grid-template-areas:
+      "i1 i2 i2"
+      "i1 i3 i4"
+      "i5 i3 i6"
+      "i7 i7 i6";
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 780px) {
   .container-gallery {
     grid-template-columns: 100%;
     grid-template-rows: repeat(7, 300px);
@@ -294,6 +298,54 @@ nav {
 }
 
 /* END OF GALLERY SECTION */
+
+/* CONTACT PAGE */
+
+.touch {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.contact:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/fusca.jpg") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left {
+  height: 100%;
+  background: url("img/fusca.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* END CONTACT PAGE */
 
 /* MEDIA QUERIES*/
 
