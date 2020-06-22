@@ -167,9 +167,138 @@ nav {
 
 /* END HOME SECTION */
 
-/* MEDIA QUERIES FOR HAMBURGER and HOME PAGE */
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.about-image {
+  flex: 1 1 40rem;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  padding-bottom: 3rem;
+}
+
+.about-text {
+  flex: 1 1 40rem;
+  padding: 3rem 5rem;
+  line-height: 3.5rem;
+  font-weight: lighter;
+}
+
+.text-container {
+  background: var(--second-gray-color);
+  padding: 5rem;
+}
+
+/* END ABOUT SECTION */
+
+.burger,
+.menu-check {
+  display: none;
+}
+
+/* GALLERY SECTION */
+
+.gallery {
+  height: 100vh;
+  width: 100vw;
+  background: var(--second-gray-color);
+  overflow: auto;
+}
+.container-gallery {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  grid-template-areas:
+    "i1 i2 i2 i3"
+    "i1 i4 i5 i3"
+    "i6 i6 i7 i7";
+}
+.container-gallery .i1 {
+  grid-area: i1;
+  background: url("img/couple.jpg");
+}
+.container-gallery .i2 {
+  grid-area: i2;
+  background: url("img/img1.jpg");
+}
+.container-gallery .i3 {
+  grid-area: i3;
+  background: url("img/about.jpg");
+}
+.container-gallery .i4 {
+  grid-area: i4;
+  background: url("img/img1.jpg");
+}
+.container-gallery .i5 {
+  grid-area: i5;
+  background: url("img/professional.jpg");
+}
+.container-gallery .i6 {
+  grid-area: i6;
+  background: url("img/couple.jpg");
+}
+.container-gallery .i7 {
+  grid-area: i7;
+  background: url("img/about.jpg");
+}
+.container-gallery .img_ {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.container-gallery .img_::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.7s;
+}
+.container-gallery .img_:hover::before {
+  opacity: 0;
+}
+.container-gallery .img_ img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1300px) {
+  .container-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "i1 i2 i2" "i1 i3 i4" "i5 i3 i6" "i7 i7 i6";
+  }
+}
+@media screen and (max-width: 980px) {
+  .container-gallery {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 300px);
+    grid-template-areas: "i1" "i2" "i3" "i4" "i5" "i6" "i7";
+    gap: 0;
+    row-gap: 5px;
+  }
+}
+
+/* END OF GALLERY SECTION */
+
+/* MEDIA QUERIES*/
 
 @media screen and (max-width: 857px) {
+  /* HAMBURGER and HOME PAGE  */
   .hero {
     width: 100%;
   }
@@ -177,7 +306,7 @@ nav {
     font-size: 2.7rem;
   }
   .hero-introduction p {
-    margin: 0rem 3rem;
+    padding: 3rem 4rem;
   }
   .hero-introduction a {
     margin-bottom: 4rem;
@@ -245,53 +374,12 @@ nav {
   .menu-check:checked ~ .burger span:nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
   }
-}
-/* END MEDIA QUERIES FOR HOME SECTION */
 
-/* ABOUT SECTION */
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  text-align: center;
-}
-
-.about-image {
-  flex: 1 1 40rem;
-  object-fit: cover;
-}
-
-.about-text h2 {
-  padding-bottom: 3rem;
-}
-
-.about-text {
-  flex: 1 1 40rem;
-  padding: 3rem 5rem;
-  line-height: 3.5rem;
-  font-weight: lighter;
-}
-
-.text-container {
-  background: var(--second-gray-color);
-  padding: 5rem;
-}
-/* END ABOUT SECTION */
-
-/* ABOUT SECTION MEDIA QUERIES*/
-
-@media screen and (max-width: 857px) {
+  /*  MEDIA QUERY FOR ABOUT SECTION */
   .about-image {
-    margin: 5rem;
+    padding: 5rem;
   }
   .about-text {
-    margin: 5rem;
+    padding: 3rem 4rem;
   }
-}
-
-/* END ABOUT SECTION MEDIA QUERIES*/
-
-.burger,
-.menu-check {
-  display: none;
 }
