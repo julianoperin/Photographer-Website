@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=Lora&family=Montserrat:wght@300&family=Quicksand:wght@300&family=Tangerine&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fe90d21f4.js" crossorigin="anonymous"></script>
-    <title>John Pietro Guth | Photographer</title>
+    <title>Photo Phactory</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
@@ -45,7 +45,7 @@
     <!-- About Section -->
         <section id="about" class="about">
             <div class="about-image flex">
-                <img src="img/about.jpg" alt="model">
+                <img src="img/about-model.jpg" alt="model">
             </div>
             <div class="about-text flex">
                 <div class="text-container">
@@ -76,13 +76,16 @@
         <div class="contact">
         <div class="contact-box">
             <div class="left"></div>
+
             <div class="right">
+                <form action="https://formspree.io/xbjzpnvn" method="POST">
                 <h2 class="title-contact">Contact Us</h2>
-                <input type="text" class="field" placeholder="Your Name">
-                <input type="email" class="field" placeholder="Your Email">
-                <input type="text" class="field" placeholder="Your Phone">
-                <textarea class="field area" placeholder="Message"></textarea>
+                <input type="text" class="field" placeholder="Your Name" name="name" required>
+                <input type="email" class="field" placeholder="Your Email" name="email" required>
+                <input type="text" class="field" placeholder="Your Phone" name="phone">
+                <textarea class="field area" placeholder="Message" name="message"></textarea>
                 <button class="btn">Send</button>
+            </form>
             </div>
         </div>
       </div>
@@ -91,7 +94,7 @@
 
     <!-- Footer -->
     <footer class="social-menu">
-        <h4 class="flex">Photo Phactory &copy; 2019</h4>
+        <h4 class="flex">Photo Phactory &copy; 2020</h4>
         <ul>
             <li><a href=""><i class="fa fa-facebook"></i></a></li>
             <li><a href=""><i class="fa fa-twitter"></i></a></li>

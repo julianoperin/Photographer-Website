@@ -139,8 +139,10 @@ nav {
 }
 
 .hero-introduction p {
-  padding: 3rem 5rem;
+  padding: 3rem 9rem;
   line-height: 3.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.7rem;
 }
 
 .hero-introduction a {
@@ -176,6 +178,10 @@ nav {
 .about-image img {
   object-fit: cover;
   width: 400px;
+}
+
+.about-text {
+  margin-left: -180px;
 }
 
 .about-text h2 {
@@ -224,31 +230,31 @@ nav {
 }
 .container-gallery .i1 {
   grid-area: i1;
-  background: url("img/couple.jpg");
+  background: url("img/img-1.jpg");
 }
 .container-gallery .i2 {
   grid-area: i2;
-  background: url("img/img1.jpg");
+  background: url("img/img-2.jpg");
 }
 .container-gallery .i3 {
   grid-area: i3;
-  background: url("img/about.jpg");
+  background: url("img/img-3.jpg");
 }
 .container-gallery .i4 {
   grid-area: i4;
-  background: url("img/img1.jpg");
+  background: url("img/img-4.jpg");
 }
 .container-gallery .i5 {
   grid-area: i5;
-  background: url("img/professional.jpg");
+  background: url("img/img-5.jpg");
 }
 .container-gallery .i6 {
   grid-area: i6;
-  background: url("img/couple.jpg");
+  background: url("img/img-6.jpg");
 }
 .container-gallery .i7 {
   grid-area: i7;
-  background: url("img/about.jpg");
+  background: url("img/img-7.jpg");
 }
 .container-gallery .img_ {
   position: relative;
@@ -284,6 +290,14 @@ nav {
       "i7 i7 i6";
   }
 }
+
+@media screen and (max-width: 860px) {
+  .about-text {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .container-gallery {
     grid-template-columns: 100%;
@@ -340,7 +354,7 @@ nav {
 
 .left {
   height: 100%;
-  background: url("img/fusca.jpg") no-repeat center;
+  background: url("img/contact-model.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -372,7 +386,7 @@ nav {
 
 .field:focus {
   background-color: #fff;
-  border: 2px solid rgba(30, 85, 250, 0.47);
+  border: 2px solid rgba(56, 60, 72, 0.47);
 }
 
 .area {
@@ -457,7 +471,7 @@ footer {
 
 /* END OF FOOTER */
 
-/*! MEDIA QUERIES*/
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 857px) {
   /* HAMBURGER and HOME PAGE  */
