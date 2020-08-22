@@ -500,7 +500,7 @@ footer {
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: var(--gray-text);
+    background: var(--background-color);
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease;
@@ -508,7 +508,6 @@ footer {
   .nav-links a {
     color: white;
     font-size: var(--header3);
-    text-decoration: underline;
   }
   .nav-links {
     background: var(--background-color);
@@ -520,6 +519,7 @@ footer {
     flex-direction: column;
     align-items: center;
     transition: transform 1s ease;
+    justify-content: space-evenly;
   }
 
   .nav-open {
