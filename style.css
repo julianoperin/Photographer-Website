@@ -421,7 +421,7 @@ footer {
 }
 
 .social-menu h4 {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 .social-menu ul {
   display: flex;
@@ -485,74 +485,57 @@ footer {
     padding: 0 1.5rem;
   }
   .hero-introduction h2 {
+    margin-top: 4rem;
     font-size: 2.7rem;
   }
 
   .hero-introduction a {
     margin-bottom: 4rem;
   }
-  /* burger menu */
+  /*! BURGER */
   .burger {
     position: relative;
     display: block;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: var(--black-color);
+    background: var(--gray-text);
     margin: 0.5rem 0rem;
     display: block;
-    transition: all 0.6s ease;
+    transition: all 0.5s ease;
   }
-
   .nav-links a {
     color: white;
-    font-size: 3.5rem;
-    text-decoration: none;
-    letter-spacing: 1.1rem;
+    font-size: var(--header3);
+    text-decoration: underline;
   }
-
   .nav-links {
-    background: var(--special-color);
-    position: fixed;
-    height: 100%;
+    background: var(--background-color);
     width: 100%;
+    height: 100%;
+    position: fixed;
     top: 0;
     left: 100%;
     flex-direction: column;
     align-items: center;
-    transition: all 1s ease;
+    transition: transform 1s ease;
   }
 
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-  }
-
-  .menu-check:checked + .nav-links {
+  .nav-open {
     transform: translateX(-100%);
   }
 
-  .menu-check:checked ~ .burger span {
-    background: white;
-    transition: all 0.5 ease;
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(1) {
+  .toggle .line1 {
     transform: rotateZ(45deg) translateY(300%);
+    background: white;
   }
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  .toggle .line2 {
     opacity: 0;
   }
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
 
   /*  MEDIA QUERY FOR ABOUT SECTION */
@@ -584,5 +567,13 @@ footer {
   .social-menu ul {
     grid: 1;
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .hero-introduction p {
+    padding: 1.2rem 4rem;
+    line-height: 3.5rem;
+    line-height: 3rem;
   }
 }
