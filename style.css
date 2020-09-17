@@ -22,7 +22,7 @@ html {
   --header2: calc(2.2rem + 1vw);
   --header3: calc(1.8rem + 1vw);
   --header4: calc(1.5rem + 1vw);
-  --text: calc(1rem + 1vw);
+  --text: calc(0.4rem + 1vw);
   --big: calc(6rem + 1vw);
   /* COLOR */
   --special-color: #c1a2a2;
@@ -317,7 +317,7 @@ nav {
 }
 
 .contact {
-  min-height: 90vh;
+  min-height: 88vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -417,7 +417,7 @@ nav {
 footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: 10vh;
+  min-height: 12vh;
 }
 
 .social-menu h4 {
